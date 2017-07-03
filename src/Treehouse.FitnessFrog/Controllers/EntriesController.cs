@@ -55,6 +55,7 @@ namespace Treehouse.FitnessFrog.Controllers
         [HttpPost]
         public ActionResult Add(Entry entry)
         {
+            
             // if there aren't any "Duration field valication errors,
             // then make sure that the duration is greater than 0
             if(ModelState.IsValidField("Duration") && entry.Duration <= 0)
