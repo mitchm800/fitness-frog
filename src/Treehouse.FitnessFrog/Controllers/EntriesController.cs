@@ -50,13 +50,13 @@ namespace Treehouse.FitnessFrog.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddPost(Entry entry)
+        public ActionResult Add(Entry entry)
         {
             if (ModelState.IsValid)
             {
                 _entriesRepository.AddEntry(entry);
 
-                //todo display the Entries list page
+                return RedirectToAction("Index");
             }
 
             return View(entry);
